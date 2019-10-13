@@ -27,20 +27,20 @@ class BoardAddButton extends React.Component {
 
   handleInputChange = e => {
     this.setState({
-      text: e.target.value
+      content: e.target.value
     });
   };
 
   handleAddList = () => {
     const { dispatch } = this.props;
-    const { text } = this.state;
+    const { content } = this.state;
 
-    if (text) {
+    if (content) {
       this.setState({
-        text: ""
+        content: ""
       });
-      
-      dispatch(addList(text));
+
+      dispatch(addList(content));
     }
 
     return;
@@ -48,13 +48,13 @@ class BoardAddButton extends React.Component {
 
   handleAddCard = () => {
     const { dispatch, listId } = this.props;
-    const { text } = this.state;
+    const { content } = this.state;
 
-    if (text) {
+    if (content) {
       this.setState({
-        text: ""
+        content: ""
       });
-      dispatch(addCard(listId, text));
+      dispatch(addCard(listId, content));
     }
   };
 
@@ -91,7 +91,7 @@ class BoardAddButton extends React.Component {
             placeholder={placeholder}
             autoFocus
             onBlur={this.hideForm}
-            value={this.state.text}
+            value={this.state.content}
             onChange={this.handleInputChange}
           />
         </Card>

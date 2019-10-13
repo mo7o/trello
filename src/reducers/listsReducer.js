@@ -1,23 +1,23 @@
 import { CONSTANTS } from "../actions";
 
 let listId = 2;
-let cardId = 2;
+let cardId = 4;
 
 const initialState = [
   {
     title: "Test List",
-    id: 0,
+    id: `l-${0}`,
     cards: [
-      { id: 0, content: "i created a test list" },
-      { id: 1, content: "i created another test list" }
+      { id: `c-${0}`, content: "i created a test list" },
+      { id: `c-${1}`, content: "i created another test list" }
     ]
   },
   {
     title: "Demo List",
-    id: 1,
+    id: `l-${1}`,
     cards: [
-      { id: 0, content: "i made a demo list" },
-      { id: 1, content: "i made another demo list" }
+      { id: `c-${2}`, content: "i made a demo list" },
+      { id: `c-${3}`, content: "i made another demo list" }
     ]
   }
 ];
@@ -28,15 +28,15 @@ const listsReducer = (state = initialState, action) => {
       const newList = {
         title: action.payload,
         cards: [],
-        id: listId
+        id: `l-${listId}`
       };
       listId += 1;
       return [...state, newList];
 
-    case CONSTANTS.ADD_CARD:
+    case CONSTANTS.ADD_CARD: {
       const newCard = {
         content: action.payload.content,
-        id: cardId
+        id: `c-${cardId}`
       };
       cardId += 1;
 
@@ -51,6 +51,26 @@ const listsReducer = (state = initialState, action) => {
         }
       });
 
+      return newState;
+    }
+
+    case CONSTANTS.DRAG_CARD:
+      const {
+        droppableIdStart,
+        droppableIdEnd,
+        droppableIndexStart,
+        droppableIndexEnd,
+        draggableId
+      } = action.payload;
+      const newState = [...state];
+
+      // dragging within the same list
+      if (droppableIdStart === droppableIdEnd) {
+        const list = state.find(list => droppableIdStart === list.id);
+        const card = list.cards.splice(droppableIndexStart, 1);
+
+        list.cards.splice(droppableIndexEnd, 0, ...card);
+      }
       return newState;
 
     default:

@@ -6,3 +6,22 @@ export const addList = title => {
     payload: title
   };
 };
+
+export const reOrder = (
+  droppableIdStart,
+  droppableIdEnd,
+  droppableIndexStart,
+  droppableIndexEnd,
+  draggableId
+) => {
+  return {
+    type: CONSTANTS.DRAG_CARD,
+    payload: {
+      droppableIdStart,
+      droppableIdEnd,
+      droppableIndexStart,
+      droppableIndexEnd,
+      draggableId
+    }
+  };
+};

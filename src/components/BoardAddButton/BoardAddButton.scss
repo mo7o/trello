@@ -1,0 +1,45 @@
+.add-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 3px;
+  height: 36px;
+  width: 272px;
+  padding-left: 10px;
+}
+
+.add-list-button {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.add-card-button {
+  opacity: 0.5;
+}
+
+.add-form-container {
+  overflow: visible;
+  min-height: 80px;
+  min-width: 272px;
+  padding: 6px 8px 2px;
+}
+
+.text-area {
+  overflow: hidden;
+  resize: none;
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 15px;
+}
+
+.form-button-container {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+
+  .form-button {
+    color: #fff !important;
+    background-color: rgb(56, 173, 134) !important;
+  }
+}

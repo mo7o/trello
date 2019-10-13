@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import BoardList from "./BoardList/BoardList";
 import { connect } from "react-redux";
+import BoardList from "./BoardList/BoardList";
+import BoardAddButton from "./BoardAddButton/BoardAddButton";
+import { DragDropContext } from "react-beautiful-dnd";
 
 import "./App.scss";
 
@@ -13,8 +15,14 @@ class App extends Component {
         <h1>hello</h1>
         <div className="list-container">
           {lists.map(list => (
-            <BoardList title={list.title} cards={list.cards} />
+            <BoardList
+              listId={list.id}
+              key={list.id}
+              title={list.title}
+              cards={list.cards}
+            />
           ))}
+          <BoardAddButton list />
         </div>
       </div>
     );

@@ -10,6 +10,8 @@ p {
 }
 
 .list-container {
+  min-height: 100vh;
+  overflow-x: auto;
   display: flex;
   flex-direction: row;
 }

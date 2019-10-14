@@ -31,22 +31,24 @@ class App extends Component {
     const { lists } = this.props;
 
     return (
-      <DragDropContext onDragEnd={this.onDragEnd}>
-        <div>
-          <BoardMenu />
-          <div className="list-container">
-            {lists.map(list => (
-              <BoardList
-                listId={list.id}
-                key={list.id}
-                title={list.title}
-                cards={list.cards}
-              />
-            ))}
-            <BoardAddButton list />
+      <div>
+        <BoardMenu />
+        <DragDropContext onDragEnd={this.onDragEnd}>
+          <div>
+            <div className="list-container">
+              {lists.map(list => (
+                <BoardList
+                  listId={list.id}
+                  key={list.id}
+                  title={list.title}
+                  cards={list.cards}
+                />
+              ))}
+              <BoardAddButton list />
+            </div>
           </div>
-        </div>
-      </DragDropContext>
+        </DragDropContext>
+      </div>
     );
   }
 }

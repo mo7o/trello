@@ -16,7 +16,7 @@ const BoardCard = ({ content, id, index }) => {
           {...provided.dragHandleProps}
         >
           <Card className="card-container">
-            <CardContent>
+            <CardContent className="card-inner">
               <Typography gutterBottom>{content}</Typography>
             </CardContent>
           </Card>

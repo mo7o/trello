@@ -1,0 +1,42 @@
+.board-menu-container {
+  position: relative;
+  z-index: 1;
+  p,
+  h3 {
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  p span {
+    padding: 6px 10px;
+    background-color: rgba(255, 255, 255, 0.192);
+    border-radius: 4px;
+    margin: 0 8px;
+  }
+
+  p span:hover {
+    background-color: rgba(255, 255, 255, 0.404);
+    border-radius: 4px;
+  }
+
+  p:not(:last-child) {
+    border-left: 1px solid rgba(255, 255, 255, 0.24);
+    color: #fff;
+  }
+
+  h3 {
+    margin-right: 38px;
+    margin-left: 15px;
+  }
+}
+
+.menu-toggle {
+  float: right;
+}
+
+.favorite {
+  color: rgb(229, 255, 0);
+  background-color: rgba(255, 255, 255, 0.404);
+  border-radius: 4px;
+}

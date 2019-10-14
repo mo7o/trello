@@ -1,23 +1,32 @@
 import { CONSTANTS } from "../actions";
 
-let listId = 2;
-let cardId = 4;
+let listId = 3;
+let cardId = 9;
 
 const initialState = [
   {
-    title: "Test List",
+    title: "To Do",
     id: `l-${0}`,
     cards: [
-      { id: `c-${0}`, content: "i created a test list" },
-      { id: `c-${1}`, content: "i created another test list" }
+      { id: `c-${0}`, content: "Return shoes" },
+      { id: `c-${1}`, content: "Call mom" },
+      { id: `c-${2}`, content: "Book flight to Hawaii" },
+      { id: `c-${3}`, content: "Pick up dry cleaning" }
     ]
   },
   {
-    title: "Demo List",
+    title: "Doing",
     id: `l-${1}`,
+    cards: [{ id: `c-${4}`, content: "Laundry" }]
+  },
+  {
+    title: "Done",
+    id: `l-${2}`,
     cards: [
-      { id: `c-${2}`, content: "i made a demo list" },
-      { id: `c-${3}`, content: "i made another demo list" }
+      { id: `c-${5}`, content: "Go to the bank" },
+      { id: `c-${6}`, content: "Get a haircut" },
+      { id: `c-${7}`, content: "Schedule band practice" },
+      { id: `c-${8}`, content: "Fix bathroom cabinet" }
     ]
   }
 ];

@@ -4,8 +4,13 @@
   cursor: pointer;
   border-radius: 3px;
   height: 36px;
-  width: 272px;
-  padding-left: 10px;
+  min-width: 272px;
+  padding-left: 2px;
+}
+
+.add-button:hover {
+  background-color: rgba(196, 196, 196, 0.486);
+  border-radius: 4px;
 }
 
 .add-list-button {
@@ -40,6 +45,6 @@
 
   .form-button {
     color: #fff !important;
-    background-color: rgb(56, 173, 134) !important;
+    background-color: #61bd4e !important;
   }
 }

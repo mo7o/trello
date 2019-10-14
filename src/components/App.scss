@@ -1,3 +1,14 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: #172b4d;
+  background-color: #0079bf;
+}
+
+p {
+  font-size: 15px;
+  font-weight: 400;
+}
+
 .list-container {
   display: flex;
   flex-direction: row;

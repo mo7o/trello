@@ -36,6 +36,7 @@ class BoardAddButton extends React.Component {
     const { content } = this.state;
 
     if (content) {
+      // reset list input field to blank
       this.setState({
         content: ""
       });
@@ -51,9 +52,11 @@ class BoardAddButton extends React.Component {
     const { content } = this.state;
 
     if (content) {
+      // reset card input field to blank
       this.setState({
         content: ""
       });
+
       dispatch(addCard(listId, content));
     }
   };

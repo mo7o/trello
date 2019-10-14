@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import BoardList from "./BoardList/BoardList";
 import BoardAddButton from "./BoardAddButton/BoardAddButton";
+import BoardMenu from "./BoardMenu/BoardMenu";
 import { DragDropContext } from "react-beautiful-dnd";
 import { reOrder } from "../actions";
 
@@ -32,7 +33,7 @@ class App extends Component {
     return (
       <DragDropContext onDragEnd={this.onDragEnd}>
         <div>
-          <h1>hello</h1>
+          <BoardMenu />
           <div className="list-container">
             {lists.map(list => (
               <BoardList

@@ -1,0 +1,90 @@
+.menu-container {
+  width: 340px;
+  height: 100vh;
+  margin-top: 15px;
+  margin-right: -8px;
+  background-color: #f4f5f7;
+  padding: 10px 15px;
+  border: 1px solid rgb(195, 201, 206);
+  z-index: 100;
+
+  p {
+    color: #172b4d !important;
+  }
+
+  span:first-child {
+    float: right;
+    cursor: pointer;
+  }
+
+  .menu-header {
+    text-align: center;
+    border-bottom: 1px solid rgb(195, 201, 206);
+    p {
+      margin: 0;
+      padding: 0 0 15px 0;
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+
+  .sub-head {
+    display: flex;
+    padding: 10px;
+    cursor: pointer;
+
+    p {
+      display: contents;
+    }
+  }
+
+  .members {
+    border-bottom: 1px solid rgb(195, 201, 206);
+
+    .img-container {
+      margin: 15px 0;
+
+      img {
+        border-radius: 50%;
+        max-width: 43px;
+        margin-right: 5px;
+      }
+
+      img:hover {
+        cursor: pointer;
+      }
+    }
+
+    .member-invite {
+      background-color: #e4e4e4;
+      border-radius: 4px;
+    }
+  }
+
+  .menu-icons {
+    font-size: 22px;
+    margin-right: 10px;
+  }
+
+  .change-background {
+    margin-top: 20px;
+  }
+
+  .change-background:hover,
+  .filter-card:hover {
+    background-color: #e4e4e4;
+    border-radius: 4px;
+  }
+}
+
+.show-menu-icon {
+  padding: 6px 10px;
+  background-color: rgba(255, 255, 255, 0.192);
+  border-radius: 4px;
+  margin-right: 20px;
+}
+
+.show-menu-icon:hover {
+  background-color: rgba(255, 255, 255, 0.404);
+  border-radius: 4px;
+}

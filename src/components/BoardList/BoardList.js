@@ -14,7 +14,7 @@ const BoardList = ({ title, cards, listId }) => {
           ref={provided.innerRef}
           className="container"
         >
-          <h4>{title}</h4>
+          <p className="board-list-title">{title}</p>
           {cards.map((card, index) => (
             <BoardCard
               key={card.id}

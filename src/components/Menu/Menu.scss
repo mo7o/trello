@@ -88,3 +88,50 @@
   background-color: rgba(255, 255, 255, 0.404);
   border-radius: 4px;
 }
+
+.color-options-container {
+  height: 200px;
+  margin-top: 15px;
+  padding: 0 10px;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.color-options-group {
+  margin-top: 25px;
+  text-align: center;
+  .color-option {
+    height: 50px;
+    margin: 2px 3px;
+    width: 150px;
+    border-radius: 7px;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .color-option:hover {
+    opacity: 0.8;
+  }
+}
+
+.bg-green {
+  background-color: #519839 !important;
+}
+
+.bg-red {
+  background-color: #b04632 !important;
+}
+
+.bg-blue {
+  background-color: #0079bf !important;
+}
+
+.bg-orange {
+  background-color: #d29034 !important;
+}
+
+.bg-lightblue {
+  background-color: #4caecd !important;
+}
+
+.bg-pink {
+  background-color: #cd5a91 !important;
+}

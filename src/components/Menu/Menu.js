@@ -7,7 +7,8 @@ import "./Menu.scss";
 
 class Menu extends React.Component {
   state = {
-    menuHidden: true
+    menuHidden: true,
+    showColorOptions: false
   };
 
   showMenu = () => {
@@ -21,6 +22,91 @@ class Menu extends React.Component {
       menuHidden: true
     });
   };
+
+  showColorOptions = () => {
+    this.setState({
+      showColorOptions: true
+    });
+  };
+
+  hideColorOptions = () => {
+    this.setState({
+      showColorOptions: false
+    });
+  };
+
+  bgBlue = () => {
+    document.body.classList.add("bg-blue");
+    document.body.classList.remove("bg-green");
+    document.body.classList.remove("bg-red");
+    document.body.classList.remove("bg-orange");
+    document.body.classList.remove("bg-pink");
+    document.body.classList.remove("bg-lightblue");
+  };
+
+  bgRed = () => {
+    document.body.classList.add("bg-red");
+    document.body.classList.remove("bg-green");
+    document.body.classList.remove("bg-blue");
+    document.body.classList.remove("bg-orange");
+    document.body.classList.remove("bg-pink");
+    document.body.classList.remove("bg-lightblue");
+  };
+
+  bgGreen = () => {
+    document.body.classList.add("bg-green");
+    document.body.classList.remove("bg-blue");
+    document.body.classList.remove("bg-red");
+    document.body.classList.remove("bg-orange");
+    document.body.classList.remove("bg-pink");
+    document.body.classList.remove("bg-lightblue");
+  };
+
+  bgOrange = () => {
+    document.body.classList.add("bg-orange");
+    document.body.classList.remove("bg-blue");
+    document.body.classList.remove("bg-red");
+    document.body.classList.remove("bg-green");
+    document.body.classList.remove("bg-pink");
+    document.body.classList.remove("bg-lightblue");
+  };
+
+  bgPink = () => {
+    document.body.classList.add("bg-pink");
+    document.body.classList.remove("bg-blue");
+    document.body.classList.remove("bg-red");
+    document.body.classList.remove("bg-orange");
+    document.body.classList.remove("bg-green");
+    document.body.classList.remove("bg-lightblue");
+  };
+
+  bgLightblue = () => {
+    document.body.classList.add("bg-lightblue");
+    document.body.classList.remove("bg-blue");
+    document.body.classList.remove("bg-red");
+    document.body.classList.remove("bg-orange");
+    document.body.classList.remove("bg-pink");
+    document.body.classList.remove("bg-green");
+  };
+
+  renderColorOptions() {
+    return (
+      <div className="color-options-container">
+        <span onClick={this.hideColorOptions}>&#10005;</span>
+        <div className="color-options-group">
+          <div onClick={this.bgBlue} className="color-option bg-blue"></div>
+          <div onClick={this.bgRed} className="color-option bg-red"></div>
+          <div onClick={this.bgGreen} className="color-option bg-green"></div>
+          <div onClick={this.bgOrange} className="color-option bg-orange"></div>
+          <div onClick={this.bgPink} className="color-option bg-pink"></div>
+          <div
+            onClick={this.bgLightblue}
+            className="color-option bg-lightblue"
+          ></div>
+        </div>
+      </div>
+    );
+  }
 
   renderMenu() {
     return (
@@ -46,10 +132,17 @@ class Menu extends React.Component {
           </div>
         </div>
 
-        <div className="change-background sub-head">
-          <ColorLensOutlinedIcon className="menu-icons" />
-          <p>Change Background</p>
-        </div>
+        {this.state.showColorOptions ? (
+          this.renderColorOptions()
+        ) : (
+          <div
+            onClick={this.showColorOptions}
+            className="change-background sub-head"
+          >
+            <ColorLensOutlinedIcon className="menu-icons" />
+            <p>Change Background</p>
+          </div>
+        )}
 
         <div className="filter-card sub-head">
           <FilterListOutlinedIcon className="menu-icons" />

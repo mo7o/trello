@@ -18,8 +18,8 @@ class App extends Component {
     this.props.dispatch(
       reOrder(
         source.droppableId,
-        source.index,
         destination.droppableId,
+        source.index,
         destination.index,
         draggableId
       )

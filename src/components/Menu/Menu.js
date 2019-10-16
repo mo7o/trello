@@ -36,57 +36,33 @@ class Menu extends React.Component {
   };
 
   bgBlue = () => {
+    document.body.removeAttribute("class");
     document.body.classList.add("bg-blue");
-    document.body.classList.remove("bg-green");
-    document.body.classList.remove("bg-red");
-    document.body.classList.remove("bg-orange");
-    document.body.classList.remove("bg-pink");
-    document.body.classList.remove("bg-lightblue");
   };
 
   bgRed = () => {
+    document.body.removeAttribute("class");
     document.body.classList.add("bg-red");
-    document.body.classList.remove("bg-green");
-    document.body.classList.remove("bg-blue");
-    document.body.classList.remove("bg-orange");
-    document.body.classList.remove("bg-pink");
-    document.body.classList.remove("bg-lightblue");
   };
 
   bgGreen = () => {
+    document.body.removeAttribute("class");
     document.body.classList.add("bg-green");
-    document.body.classList.remove("bg-blue");
-    document.body.classList.remove("bg-red");
-    document.body.classList.remove("bg-orange");
-    document.body.classList.remove("bg-pink");
-    document.body.classList.remove("bg-lightblue");
   };
 
   bgOrange = () => {
+    document.body.removeAttribute("class");
     document.body.classList.add("bg-orange");
-    document.body.classList.remove("bg-blue");
-    document.body.classList.remove("bg-red");
-    document.body.classList.remove("bg-green");
-    document.body.classList.remove("bg-pink");
-    document.body.classList.remove("bg-lightblue");
   };
 
   bgPink = () => {
+    document.body.removeAttribute("class");
     document.body.classList.add("bg-pink");
-    document.body.classList.remove("bg-blue");
-    document.body.classList.remove("bg-red");
-    document.body.classList.remove("bg-orange");
-    document.body.classList.remove("bg-green");
-    document.body.classList.remove("bg-lightblue");
   };
 
   bgLightblue = () => {
+    document.body.removeAttribute("class");
     document.body.classList.add("bg-lightblue");
-    document.body.classList.remove("bg-blue");
-    document.body.classList.remove("bg-red");
-    document.body.classList.remove("bg-orange");
-    document.body.classList.remove("bg-pink");
-    document.body.classList.remove("bg-green");
   };
 
   renderColorOptions() {
